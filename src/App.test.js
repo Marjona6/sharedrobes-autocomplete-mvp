@@ -7,8 +7,8 @@ test('renders header', () => {
   expect(headerElement).toBeInTheDocument()
 })
 
-// test("renders autocomplete input field", () => {
-//   render(<App />);
-//   const autocompleteInputElement = screen.findByRole("header"); //
-//   expect(autocompleteInputElement).toBeInTheDocument();
-// });
+test('renders autocomplete input field', () => {
+  render(<App />)
+  const autocompleteInputElement = screen.getByLabelText('item-description')
+  expect(autocompleteInputElement).toBeInTheDocument()
+})
